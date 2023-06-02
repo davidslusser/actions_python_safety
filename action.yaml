@@ -1,4 +1,4 @@
-name: actions_python_mypy
+name: actions_python_safety
 description: Github action for running security vulnerability checks on python dependencies with safety
 branding:
   icon: 'check-circle'

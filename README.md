@@ -14,7 +14,7 @@ Examples:
 on: [push]
 
 jobs:
-  mypy:
+  safety:
     runs-on: ubuntu-latest
     name: "safety"
     steps:
@@ -26,7 +26,7 @@ jobs:
 on: [push]
 
 jobs:
-  mypy:
+  safety:
     runs-on: ubuntu-latest
     name: "safety"
     steps:
@@ -41,7 +41,7 @@ jobs:
 <br/>
 
 ## Inputs
-  - **options:** optional flags/parameters used in mypy command
+  - **options:** optional flags/parameters used in safety command
   - **pip_install_command:** pip install command (defaults to "`pip install safety`")
    - **python_version:** version of python to run workflow with (defaults to "`3.x`")
 
@@ -49,5 +49,5 @@ jobs:
 <br/>
 
 ## References
- - https://mypy.readthedocs.io/en/stable/
- - https://pypi.org/project/mypy/
+ - https://pyup.io/safety/
+ - https://pypi.org/project/safety/
