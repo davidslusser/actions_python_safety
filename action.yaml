@@ -23,15 +23,15 @@ runs:
   using: "composite"
   steps:
     - name: Clear cache
-      run: |
-        echo "::set-output name=clear_cache::true"
+      run: echo "::set-output name=clear_cache::true"
+      shell: bash
 
     - uses: actions/checkout@v4
     - name: "Setup Python ${{ inputs.python_version }}"
       uses: actions/setup-python@v5
       with:
         python-version: ${{ inputs.python_version }}
-    
+
     - name: "Show Python Version"
       run: python --version
       shell: bash
