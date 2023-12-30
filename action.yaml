@@ -32,10 +32,12 @@ runs:
       run: python --version
       shell: bash
 
+    - name: "Update pip"
+      run: python -m pip install --upgrade pip
+      shell: bash
+
     - name: "Install Python Dependencies"
-      run: |
-        python -m pip install --upgrade pip
-        ${{ inputs.pip_install_command }}
+      run: "${{ inputs.pip_install_command }}"
       shell: bash
        
     - name: "Run Safety"
