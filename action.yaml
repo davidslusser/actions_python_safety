@@ -27,32 +27,13 @@ runs:
       uses: actions/setup-python@v5
       with:
         python-version: ${{ inputs.python_version }}
-
-    - name: "Show Python Version"
-      run: python --version
-      shell: bash
-
-    - name: Create virtual environment
-      run: | 
-        python -m venv venv
-      shell: bash
-
-    - name: "Update PIP"
-      run: | 
-        source venv/bin/activate
-        python -m pip install --upgrade pip
-      shell: bash
-
-    - name: "Show PIP Version"
-      run: pip --version
-      shell: bash
-
-    - name: "Install Python Dependencies"
-      run: "${{ inputs.pip_install_command }}"
-      shell: bash
        
     - name: "Run Safety"
       run: |
+        python -m venv venv
         source venv/bin/activate
+        python --version
+        pip --version
+        "${{ inputs.pip_install_command }}"
         "safety ${{ inputs.options }} check"
       shell: bash
