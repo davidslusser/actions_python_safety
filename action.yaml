@@ -27,11 +27,9 @@ runs:
       uses: actions/setup-python@v5
       with:
         python-version: ${{ inputs.python_version }}
-       
+
     - name: "Run Safety"
       run: |
-        python -m venv venv
-        source venv/bin/activate
         python --version
         pip --version
         "${{ inputs.pip_install_command }}"
