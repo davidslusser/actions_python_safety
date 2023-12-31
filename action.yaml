@@ -52,5 +52,7 @@ runs:
       shell: bash
        
     - name: "Run Safety"
-      run: "safety ${{ inputs.options }} check"
+      run: |
+        source venv/bin/activate
+        "safety ${{ inputs.options }} check"
       shell: bash
