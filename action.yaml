@@ -7,24 +7,21 @@ inputs:
   options:
     description: "additional flags/parameters to be passed to the safety command"
     required: false
-    type: string
     default: ""  
   pip_install_command: 
     description: "command used to install python dependancies"
     required: false
-    type: string
     default: "pip install safety"
   python_version:
     description: "version of python to run action with"
     required: false
-    type: string
     default: "3.x"
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: "Setup Python ${{ inputs.python_version }}"
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ inputs.python_version }}
     
