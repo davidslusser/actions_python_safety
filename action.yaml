@@ -39,5 +39,5 @@ runs:
       run: |
         python -m pip install --upgrade pip
         ${{ inputs.pip_install_command }}
-        "safety ${{ inputs.options }} check"
+        safety ${{ inputs.options }} check
       shell: bash
