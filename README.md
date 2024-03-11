@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "safety"
     steps:
-      - uses: davidslusser/actions_python_safety@v1.0.0
+      - uses: davidslusser/actions_python_safety@v1.0.1
 ```
 <br/>
 
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     name: "safety"
     steps:
-      - uses: davidslusser/actions_python_safety@v1.0.0
+      - uses: davidslusser/actions_python_safety@v1.0.1
         with:
           options: "--debug"
           pip_install_command: "pip install -e .[dev]"
