@@ -39,5 +39,5 @@ runs:
       shell: bash
        
     - name: "Run Safety"
-      run: "safety ${{ inputs.options }} check"
+      run: "safety check ${{ inputs.options }}"
       shell: bash
